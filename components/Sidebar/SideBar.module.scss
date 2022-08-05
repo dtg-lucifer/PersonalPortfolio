@@ -1,0 +1,124 @@
+// @use "../../styles/scss/variables" as var;
+@import '../../styles/scss/_variables';
+
+.mainWrapper {
+    // color: var.$primary-color;
+    color: $primary-color;
+    background-color: $dark-bg-color;
+    position: fixed;
+    width: 7rem;
+    padding: 2rem 1rem;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    & *:first-child {
+        cursor: pointer;
+    }
+    .logo {
+        background-color: $dark-bg-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.6rem;
+        padding: 1.5rem 0;
+        height: auto;
+        img {
+            background-color: $dark-bg-color;
+        }
+        & > h4 {
+            background-color: $dark-bg-color;
+            font-size: 20px;
+            color: rgb(200 200 200 / 70%);
+        }
+    }
+    .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        font-size: 28px;
+        color: #4d4d4e;
+        padding: 2rem 0;
+        background-color: $dark-bg-color;
+        & .active {
+            color: $primary-color;
+        }
+        & div.link {
+            position: relative;
+            padding: 0 1rem;
+            &:first-child {
+                &::after {
+                    content: 'HOME';
+                }
+            }
+            &:nth-child(2) {
+                &::after {
+                    content: 'ABOUT';
+                }
+            }
+            &:nth-child(3) {
+                &::after {
+                    content: 'PROJECTS';
+                }
+            }
+            &:nth-child(4) {
+                &::after {
+                    content: 'CONTACT';
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                padding: 0.5rem;
+                margin: auto;
+                font-size: 10px;
+                background-color: $dark-bg-color;
+                box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 1);
+                font-family: 'Coolvetica';
+                color: $primary-color;
+                letter-spacing: 3px;
+                opacity: 0;
+                transition: all 0.15s;
+            }
+            &:hover {
+                & > svg {
+                    opacity: 0.5;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        & > div > svg {
+            background-color: $dark-bg-color;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        font-size: 18px;
+        color: #4d4d4e;
+        & * {
+            transition: opacity 0.15s;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

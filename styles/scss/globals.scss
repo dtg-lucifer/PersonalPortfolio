@@ -1,0 +1,36 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Kaushan+Script&family=Libre+Barcode+39+Text&family=Major+Mono+Display&family=Satisfy&display=swap');
+@import "./_variables";
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('../../assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../../assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+input,
+textarea {
+  font-family: 'helvetica-neu';
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: $primary-bg-color;
+  }
+}
