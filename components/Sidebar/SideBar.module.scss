@@ -3,6 +3,7 @@
 
 .mainWrapper {
     // color: var.$primary-color;
+    animation: fadeLeft 1s .25s backwards;
     color: $primary-color;
     background-color: $dark-bg-color;
     position: fixed;
@@ -87,14 +88,16 @@
                 font-family: 'Coolvetica';
                 color: $primary-color;
                 letter-spacing: 3px;
+                visibility: hidden;
                 opacity: 0;
-                transition: all 0.15s;
+                transition: all .15s;
             }
-            &:hover {
+            &:hover {   
                 & > svg {
                     opacity: 0.5;
                 }
                 &::after {
+                    visibility: visible;
                     opacity: 1;
                 }
             }
@@ -114,11 +117,23 @@
         flex-direction: column;
         font-size: 18px;
         color: #4d4d4e;
-        & * {
+        & svg {
             transition: opacity 0.15s;
             &:hover {
                 opacity: 0.5;
             }
         }
+    }
+}
+
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

@@ -30,6 +30,14 @@
     padding: 2rem 1rem;
 }
 
+.topHtml {
+    animation: fadeIn 1s .25s backwards;
+}
+
+.topBody {
+    animation: fadeIn 1s .35s backwards;
+}
+
 .bottomTags {
     display: flex;
     flex-direction: column;
@@ -39,6 +47,25 @@
     padding: 2rem 1rem;
 }
 
+.bottomBody {
+    animation: fadeIn 1s .35s backwards;
+}
+
+.bottomHtml {
+    animation: fadeIn 1s .25s backwards;
+}
+
 .bodyTags {
     margin-left: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        transform: translateX(-50vh);
+    }
+    100% {
+        transform: scale(1);
+        transform: translateX(0);
+    }
 }
