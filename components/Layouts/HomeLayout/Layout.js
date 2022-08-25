@@ -1,4 +1,4 @@
-import Home from '../Home';
+import Home from '../../Home/index';
 import styles from './Layout.module.scss';
 
 const Layout = () => {
