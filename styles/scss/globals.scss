@@ -24,6 +24,12 @@ textarea {
   font-family: 'helvetica-neu';
 }
 
+#SBS__CONTAINER {
+  display: flex;
+  gap: 1rem;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

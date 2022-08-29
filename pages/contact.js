@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Contact = () => {
-    return <div style={{ paddingLeft: '8rem' }}>Contact</div>;
+    return <div style={{ flex: 1, marginBlock: "1rem", marginRight: "1rem", position: "relative" }}>Contact</div>;
 };
 
 export default Contact;

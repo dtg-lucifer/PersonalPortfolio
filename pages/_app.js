@@ -4,11 +4,13 @@ import '../styles/scss/globals.scss';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <div style={{ maxHeight: "100vh" }}>
             <Header />
-            <SideBar />
-            <Component {...pageProps} />
-        </>
+            <div id="SBS__CONTAINER">
+                <SideBar />
+                <Component {...pageProps} />
+            </div>
+        </div>
     );
 }
 
