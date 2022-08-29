@@ -1,0 +1,44 @@
+@use '../../styles/scss/_variables' as v;
+
+.container {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    & > .heading {
+        &::before {
+            content: '<h1>';
+            margin-inline-end: 2rem;
+        }
+        &::after {
+            content: '</h1>';
+            margin-inline-start: 2rem;
+        }
+        &::after,
+        &::before {
+            font-family: v.$handwritng-font;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: v.$primary-color;
+        }
+    }
+    & > h1.heading > span > span {
+        font-family: v.$kaushan-script;
+        font-size: 4rem;
+    }
+    & > p {
+        font-family: Coolvetica;
+        letter-spacing: 2px;
+        font-size: 15px;
+        margin-block: 2rem;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

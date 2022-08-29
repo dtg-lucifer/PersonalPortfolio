@@ -1,4 +1,4 @@
-import Home from '../../Home/index';
+import Home from '../../components/Home/index';
 import styles from './Layout.module.scss';
 
 const Layout = () => {
@@ -15,7 +15,10 @@ const Layout = () => {
                       &lt;body&gt;
                   </span>
                 </div>
+
+                {/* Home component */}
                 <Home />
+
                 <div className={styles.bottomTags}>
                   <span className={`${styles.tags} ${styles.bodyTags} ${styles.bottomBody}`}>
                       &lt;/body&gt;

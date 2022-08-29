@@ -6,32 +6,13 @@ import { FaJava } from 'react-icons/fa';
 import { FaJsSquare } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 import AnimatedLetters from '../AnimatedLetter';
+import MainLogo from './MainLogo';
 
 const Home = () => {
     const nameArray = ['P', 'i', 'u', 's', 'h'];
-    const joArray = [
-        's',
-        'o',
-        'f',
-        't',
-        'w',
-        'a',
-        'r',
-        'e',
-        'd',
-        'e',
-        'v',
-        'e',
-        'l',
-        'o',
-        'p',
-        'e',
-        'r',
-    ];
-
     return (
         <div className={styles.container}>
-            {/*
+            {/*             
             <div className={styles.iconZone}>
                 <div className={styles.icons}><SiGithubactions /></div>
                 <div className={styles.icons}><FiGithub /></div>
@@ -56,13 +37,17 @@ const Home = () => {
                     {' / '}
                     <span>Java Dveloper</span>
                     {' / '}
-                    {/* <span>Android Developer</span>{" / "} */}
+                    <span>Android Developer</span>
+                    {' / '}
                     <span>Javascript Expert</span>
                     {' / '}
                     <span>Youtuber</span>
                 </h3>
                 <button className={styles.contactBtn}>Contact Me</button>
             </div>
+            {/* <div className={styles.mainLogo}>
+                <MainLogo />
+            </div> */}
         </div>
     );
 };

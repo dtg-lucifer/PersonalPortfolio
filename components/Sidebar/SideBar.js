@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './SideBar.module.scss';
-import logoS from '../../assets/images/logo-s.png';
+import logoS from '../../assets/images/logo-p.png';
 import { FaHome, FaLaptopCode, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { HiMail } from 'react-icons/hi';
+import { HiMail, HiScale } from 'react-icons/hi';
 import { IoMdPerson } from 'react-icons/io';
 import { useRouter } from "next/router"
 
@@ -13,7 +13,7 @@ const SideBar = () => {
         <div className={styles.mainWrapper}>
             <Link className={styles.logo} href="/">
                 <div className={styles.logo}>
-                    <Image src={logoS} height={200} width={150} />
+                    <Image src={logoS} height={400} width={400} objectFit={"cover"} style={{ transform: "scale(1.8)" }} />
                     <h4>Piush</h4>
                 </div>
             </Link>

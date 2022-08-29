@@ -1,9 +1,9 @@
-import Layout from '../components/Layouts/HomeLayout/Layout';
+import HomeLayout from '../layouts/HomeLayout/Layout';
 
 export default function Home() {
   return (
-    <div style={{paddingLeft: '8rem'}}>
-      <Layout />
+    <div style={{ flex: 1 }}>
+      <HomeLayout />
     </div>
   );
 }
