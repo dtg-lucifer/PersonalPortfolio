@@ -19,8 +19,7 @@
     "react-icons": "^4.4.0",
     "react-leaflet": "^4.0.1",
     "react-loaders": "^3.0.1",
-    "sass": "^1.54.1",
-    "styled-components": "^5.3.5"
+    "sass": "^1.54.8"
   },
   "devDependencies": {
     "eslint": "8.21.0",

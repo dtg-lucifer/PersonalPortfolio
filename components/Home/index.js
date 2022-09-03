@@ -11,7 +11,7 @@ import MainLogo from './MainLogo';
 const Home = () => {
     const nameArray = ['P', 'i', 'u', 's', 'h'];
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{ position: "relative"}}>
             {/*             
             <div className={styles.iconZone}>
                 <div className={styles.icons}><SiGithubactions /></div>
@@ -45,9 +45,9 @@ const Home = () => {
                 </h3>
                 <button className={styles.contactBtn}>Contact Me</button>
             </div>
-            {/* <div className={styles.mainLogo}>
+            <div className={styles.mainLogo}>
                 <MainLogo />
-            </div> */}
+            </div>
         </div>
     );
 };

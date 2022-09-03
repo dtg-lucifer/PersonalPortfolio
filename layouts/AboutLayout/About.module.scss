@@ -1,44 +1,141 @@
-@use '../../styles/scss/_variables' as v;
+@use "../../styles/scss/_variables" as v;
 
 .container {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    & > .heading {
-        &::before {
-            content: '<h1>';
-            margin-inline-end: 2rem;
-        }
-        &::after {
-            content: '</h1>';
-            margin-inline-start: 2rem;
-        }
-        &::after,
-        &::before {
-            font-family: v.$handwritng-font;
-            font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 2rem);
+    position: relative;
+    z-index: 9;
+    .textZone {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 4rem;
+        gap: 4rem;
+        & > .aboutTag {
+            font-family: v.$kaushan-script;
+            font-size: 1.2rem;
             letter-spacing: 2px;
             color: v.$primary-color;
+            margin-left: -4rem;
+            position: absolute;
         }
-    }
-    & > h1.heading > span > span {
-        font-family: v.$kaushan-script;
-        font-size: 4rem;
-    }
-    & > p {
-        font-family: Coolvetica;
-        letter-spacing: 2px;
-        font-size: 15px;
-        margin-block: 2rem;
+        & > .topTag {
+            content: "<about>";
+            margin-top: -10rem;
+            animation: fadeLeft 1s 0.1s backwards;
+            top: 10;
+        }
+        & > .bottomTag {
+            content: "</about>";
+            margin-bottom: -10rem;
+            animation: fadeLeft 1s 0.5s backwards;
+            bottom: 10; 
+        }
+        .textArea {
+            flex: 3;
+            margin-left: 4rem;
+            & > .heading {
+                &::before {
+                    content: "<h1>";
+                    animation: fadeLeft 1s 0.2s backwards;
+                    margin-inline-end: 2rem;
+                }
+                &::after {
+                    content: "</h1>";
+                    animation: fadeLeft 1s 0.4s backwards;
+                    margin-inline-start: 2rem;
+                }
+                &::after,
+                &::before {
+                    display: inline-block;
+                    font-family: v.$kaushan-script;
+                    font-size: 1.2rem;
+                    letter-spacing: 2px;
+                    color: v.$primary-color;
+                }
+            }
+            & > h1.heading > span > span {
+                font-family: v.$kaushan-script;
+                font-size: 6rem;
+            }
+            & > p {
+                font-family: "Coolvetica";
+                letter-spacing: 2px;
+                font-size: 15px;
+                font-weight: lighter;
+                margin-block: 2rem;
+                animation-name: fadeLeft;
+                animation-duration: 1s;
+                animation-fill-mode: backwards;
+            }
+        }
+        .icons {
+            flex: 1;
+            top: 0;
+            right: 0;
+            height: 40vh;
+            margin-left: 0;
+            overflow: hidden;
+            // & > .cubeSpinner {
+            //     animation-name: spinCube;
+            //     animation-timing-function: ease-in-out;
+            //     animation-iteration-count: infinite;
+            //     animation-duration: 12s;
+            //     transform-style: preserve-3d;
+            //     transform-origin: 100px 100px 0;
+            //     margin-left: calc(50% - 100px);
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     & > div {
+            //         position: absolute;
+            //         width: 200px;
+            //         height: 200px;
+            //         border: 1px solid #ccc;
+            //         background: rgba(255, 255, 255, 0.4);
+            //         font-size: 100px;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         box-shadow: 0 0 20px 0 lightyellow;
+            //     }
+            // }
+        }
     }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeLeft {
     0% {
-        transform: translateX(-100vw);
+        opacity: 0;
+        transform: translateX(-20vw);
     }
     100% {
+        opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes spinCube {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    } 16% {
+        transform: rotateY(-90deg);
+    } 33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    } 50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    } 66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    } 83% {
+        transform: rotateX(90deg);
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        margin-right: 3rem;
     }
 }

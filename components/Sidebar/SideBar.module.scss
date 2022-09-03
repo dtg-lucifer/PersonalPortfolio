@@ -2,11 +2,11 @@
 @import '../../styles/scss/_variables';
 
 .mainWrapper {
-    // color: var.$primary-color;
     animation: fadeLeft 1s .25s backwards;
     color: $primary-color;
     background-color: $dark-bg-color;
     position: sticky;
+    z-index: 10;
     width: 7rem;
     padding: 2rem 1rem;
     height: 100vh;
