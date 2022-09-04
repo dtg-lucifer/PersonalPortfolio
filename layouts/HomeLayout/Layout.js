@@ -1,5 +1,6 @@
 import Home from '../../components/Home/index';
 import styles from './Layout.module.scss';
+import styled, { keyframes } from 'styled-components';
 
 const Layout = () => {
     return (
@@ -30,28 +31,64 @@ const Layout = () => {
                     </span>
                 </div>
             </div>
-            <svg
-                style={{ 
-                    position: "absolute", 
-                    fontSize: "20px", 
-                    height: "20px", 
-                    width: "50px", 
-                    top: "50%", 
-                    right: "10%",
-                }}
-                className={styles.waves}
-                viewBox="0 0 10 10"
+            <Svg
+                viewBox="0 0 50 50"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
-                    d="M1 1C3 2 4 0 6 1 8 2 9 0 11 1 13 2 13 0 16 1 18 2 19 0 21 1 23 2 23 0 26 1 29 2 28 0 31 1 34 2 33 0 36 1"
+                    d="M1 1C3 2 4 0 6 1 8 2 9 0 11 1 13 2 13 0 16 1 18 2 19 0 21 1 23 2 23 0 26 1 29 2 28 0 31 1 34 2 33 0 36 1 39 2 38 0 41 1 43 2 44 0 46 1 48 2 49 0 51 1 53 2 54 0 56 1 58 2 59 0 61 1 63 2 64 0 66 1"
                     stroke="yellow"
                     strokeWidth=".7px"
                 />
-            </svg>
+            </Svg>
+            <SvgLeft
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1 1C3 2 4 0 6 1 8 2 9 0 11 1 13 2 13 0 16 1 18 2 19 0 21 1 23 2 23 0 26 1 29 2 28 0 31 1 34 2 33 0 36 1 39 2 38 0 41 1 43 2 44 0 46 1 48 2 49 0 51 1 53 2 54 0 56 1 58 2 59 0 61 1 63 2 64 0 66 1"
+                    stroke="yellow"
+                    strokeWidth=".7px"
+                />
+            </SvgLeft>
         </div>
     );
 };
+
+const StrokeAnimation = keyframes`
+    to {
+        stroke-dashoffset: 0;
+    }
+`
+
+const Svg = styled.svg`
+    position: absolute;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+    top: 90%;
+    right: 5%;
+    path {
+        stroke-dashoffset: 67.19px;
+        stroke-dasharray: 67.19px;
+        animation: ${StrokeAnimation} 1s 2s ease forwards;
+    }
+`
+
+const SvgLeft = styled.svg`
+    position: absolute;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+    top: 20%;
+    left: 40%;
+    path {
+        stroke-dashoffset: 67.19px;
+        stroke-dasharray: 67.19px;
+        animation: ${StrokeAnimation} 1s 1.7s ease forwards;
+    }
+`
 
 export default Layout;
