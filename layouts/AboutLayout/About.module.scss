@@ -11,27 +11,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2rem 4rem;
+        padding: 2rem 2rem;
         gap: 4rem;
         & > .aboutTag {
             font-family: v.$kaushan-script;
             font-size: 1.2rem;
             letter-spacing: 2px;
             color: v.$primary-color;
-            margin-left: -4rem;
+            margin-left: -2rem;
             position: absolute;
         }
-        & > .topTag {
-            content: "<about>";
-            margin-top: -10rem;
+        .topTag {
+            margin-top: 5rem;
             animation: fadeLeft 1s 0.1s backwards;
-            top: 10;
+            top: 0;
         }
-        & > .bottomTag {
-            content: "</about>";
-            margin-bottom: -10rem;
+        .bottomTag {
+            margin-bottom: 5rem;
             animation: fadeLeft 1s 0.5s backwards;
-            bottom: 10; 
+            bottom: 0;
         }
         .textArea {
             flex: 3;
@@ -60,7 +58,8 @@
                 font-family: v.$kaushan-script;
                 font-size: 6rem;
             }
-            & > p {
+            & > p.aboutQuote {
+                position: relative;
                 font-family: "Coolvetica";
                 letter-spacing: 2px;
                 font-size: 15px;
@@ -69,6 +68,7 @@
                 animation-name: fadeLeft;
                 animation-duration: 1s;
                 animation-fill-mode: backwards;
+                z-index: 99;
             }
         }
         .icons {
@@ -78,30 +78,6 @@
             height: 40vh;
             margin-left: 0;
             overflow: hidden;
-            // & > .cubeSpinner {
-            //     animation-name: spinCube;
-            //     animation-timing-function: ease-in-out;
-            //     animation-iteration-count: infinite;
-            //     animation-duration: 12s;
-            //     transform-style: preserve-3d;
-            //     transform-origin: 100px 100px 0;
-            //     margin-left: calc(50% - 100px);
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     & > div {
-            //         position: absolute;
-            //         width: 200px;
-            //         height: 200px;
-            //         border: 1px solid #ccc;
-            //         background: rgba(255, 255, 255, 0.4);
-            //         font-size: 100px;
-            //         display: flex;
-            //         justify-content: center;
-            //         align-items: center;
-            //         box-shadow: 0 0 20px 0 lightyellow;
-            //     }
-            // }
         }
     }
 }
@@ -114,23 +90,6 @@
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes spinCube {
-    from,
-    to {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    } 16% {
-        transform: rotateY(-90deg);
-    } 33% {
-        transform: rotateY(-90deg) rotateZ(90deg);
-    } 50% {
-        transform: rotateY(-180deg) rotateZ(90deg);
-    } 66% {
-        transform: rotateY(-270deg) rotateZ(90deg);
-    } 83% {
-        transform: rotateX(90deg);
     }
 }
 

@@ -7,9 +7,11 @@ import { FaJsSquare } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 import AnimatedLetters from '../AnimatedLetter';
 import MainLogo from './MainLogo';
+import { useRouter } from 'next/router';
 
 const Home = () => {
     const nameArray = ['P', 'i', 'u', 's', 'h'];
+    const router = useRouter();
     return (
         <div className={styles.container} style={{ position: "relative"}}>
             {/*             
@@ -43,7 +45,7 @@ const Home = () => {
                     {' / '}
                     <span>Youtuber</span>
                 </h3>
-                <button className={styles.contactBtn}>Contact Me</button>
+                <button className={styles.contactBtn} onClick={() => router.push("/contact")}>Contact Me</button>
             </div>
             <div className={styles.mainLogo}>
                 <MainLogo />

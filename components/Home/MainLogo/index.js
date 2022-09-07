@@ -11,17 +11,13 @@ const MainLogo = () => {
 
   return (
     <div className={styles.container}>
-      {/* <BlobFilled viewBox="0 0 254 274" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M189.375 28.1776L90.102 2.32543C63.1733 -4.68724 34.6149 4.45315 16.7625 25.7984C5.93331 38.7463 0 55.0888 0 71.9684V199.091C0 247.536 45.7771 282.914 92.6569 270.701L198.26 243.187C234.17 233.831 257.597 199.325 253.043 162.496L244.166 90.7079C240.444 60.6049 218.728 35.8217 189.375 28.1776Z" 
-        fill="#17172c" />
-      </BlobFilled> */}
       <BlobFilled viewBox="0 0 264 284" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_7_3)">
           <path d="M194.375 29.1776L95.102 3.32543C68.1733 -3.68724 39.6149 5.45315 21.7625 26.7984C10.9333 39.7463 5 56.0888 5 72.9684V200.091C5 248.536 50.7771 283.914 97.6569 271.701L203.26 244.187C239.17 234.831 262.597 200.325 258.043 163.496L249.166 91.7079C245.444 61.6049 223.728 36.8217 194.375 29.1776Z" fill="#17172C" />
         </g>
         <defs>
-          <filter id="filter0_d_7_3" x="0" y="0" width="263.608" height="283.13" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <filter id="filter0_d_7_3" x="0" y="0" width="263.608" height="283.13" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
             <feOffset dy="4" />
             <feGaussianBlur stdDeviation="2.5" />
@@ -36,7 +32,7 @@ const MainLogo = () => {
       <Blob viewBox="0 0 258 277" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M191.375 30.3371L92.102 4.48489C65.1733 -2.52778 36.6149 6.61261 18.7625 27.9579C7.93331 40.9058 2 57.2483 2 74.1279V201.25C2 249.695 47.7771 285.073 94.6569 272.86L200.26 245.346C236.17 235.99 259.597 201.484 255.043 164.655L246.166 92.8674C242.444 62.7644 220.728 37.9812 191.375 30.3371Z"
           stroke="#FFD700"
-          stroke-width=".5"
+          strokeWidth=".5"
         />
       </Blob>
       <svg className={styles.mainLogo} width="346" height="430" viewBox="0 0 346 430" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,15 +85,15 @@ const MainLogo = () => {
   )
 }
 
-const AnimateBlob = keyframes`
-  25% {
+const AnimateBlobOpacity = keyframes`
+  100% {
+    opacity: 1;
+  }
+`
+
+const AnimateBlobOutline = keyframes`
+  100% {
     stroke-dashoffset: 0;
-  } 50% {
-    stroke-dashoffset: 872.46px;
-  } 75% {
-    stroke-dashoffset: 0;
-  } 100% {
-    stroke-dashoffset: 872.46px;
   }
 `
 
@@ -110,7 +106,7 @@ const Blob = styled.svg`
   path:first-child {
     stroke-dasharray: 872.46px;
     stroke-dashoffset: 872.46px;
-    animation: ${AnimateBlob} 9s 3s ease-in-out infinite both;
+    animation: ${AnimateBlobOutline} 4s 3s ease-in-out both;
   }
 `
 
@@ -121,6 +117,8 @@ const BlobFilled = styled.svg`
   height: 150%;
   translate: -50% -50%;
   flex-direction: column;
+  opacity: 0;
+  animation: ${AnimateBlobOpacity} 2s 6s ease forwards;
 `
 
 export default MainLogo
