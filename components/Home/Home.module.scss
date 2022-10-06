@@ -53,7 +53,7 @@
     .textZone {
         animation: popUp 1s 1s backwards;
         & > h2 {
-            font-family: $kaushan-script;
+            font-family: 'Kaushan Script';
             font-size: 40px;
             margin-left: 4rem;
             &::before {
@@ -84,7 +84,7 @@
             margin-left: 4rem;
         }
         & > h1 > * {
-            font-family: $kaushan-script;
+            font-family: 'Kaushan Script';
             &:not(:first-child) {
                 margin-left: 10px;
             }
@@ -94,12 +94,12 @@
             color: rgb(255 255 255 / 30%);
         }
         .name > span > span {
-            font-family: $kaushan-script;
+            font-family: 'Kaushan Script';
             font-size: 75px;
         }
         & > h3,
         & > h3 > * {
-            font-family: $kaushan-script;
+            font-family: 'Kaushan Script';
             font-weight: 400;
             letter-spacing: 2px;
             letter-spacing: 2px;
