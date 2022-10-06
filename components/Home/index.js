@@ -27,7 +27,7 @@ const Home = () => {
             <div className={styles.textZone}>
                 <h2>Hi,</h2>
                 <h1>
-                    <span className={styles.namePrefix}>I'm</span>{' '}
+                    <span className={styles.namePrefix}>I&apos;m</span>{' '}
                     <span className={styles.name}>
                         <AnimatedLetters strArr={nameArray} idx={10} />
                     </span>
